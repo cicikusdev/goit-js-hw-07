@@ -25,10 +25,13 @@ const images = [
   }
 ];
 
-const galleryEl = document.querySelector('.gallery');
+window.addEventListener('DOMContentLoaded', () => {
+  const galleryEl = document.querySelector('.gallery');
+  console.log(galleryEl);  // bak buraya, null mi degil mi?
 
-const markup = images
-  .map(({ url, alt }) => `<li class="gallery-item"><img src="${url}" alt="${alt}" width="400"></li>`)
-  .join('');
+  const markup = images
+    .map(({ url, alt }) => `<li class="gallery-item"><img src="${url}" alt="${alt}" width="400"></li>`)
+    .join('');
 
-galleryEl.insertAdjacentHTML('beforeend', markup);
+  galleryEl.insertAdjacentHTML('beforeend', markup);
+});
