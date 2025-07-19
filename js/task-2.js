@@ -27,7 +27,7 @@ const images = [
 
 window.addEventListener('DOMContentLoaded', () => {
   const galleryEl = document.querySelector('.gallery');
-  console.log(galleryEl);  // bak buraya, null mi degil mi?
+  console.log(galleryEl); 
 
   const markup = images
     .map(({ url, alt }) => `<li class="gallery-item"><img src="${url}" alt="${alt}" width="400"></li>`)
